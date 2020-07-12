@@ -5,14 +5,12 @@
         </form>
     {{/if}}
 
-    <h3>{{title}}</h3>
-
     <form class="form" method="post" action="{{serviceUrl}}subscription/{{cid}}/subscribe">
         <input type="hidden" class="tz-detect" name="tz" value="">
         <input type="hidden" name="address" value="">
         <input type="hidden" class="sub-time" name="sub" value="">
         {{> subscription_custom_fields}}
-        <button type="submit">{{#translate}}Subscribe to list{{/translate}}</button>
+        <button class="et_pb_contact_submit et_pb_button" type="submit">Anmelden</button>
     </form>
 
     <div class="status"></div>
@@ -26,7 +24,7 @@
         </div>
         <div class="success" data-status-template="confirm-notice">
             <h4>{{#translate}}Almost Finished{{/translate}}</h4>
-            <p>{{#translate}}We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.{{/translate}}</p>
+            <p>Vielen Dank für deine Anmeldung. Um die Anmeldung abzuschließen klicke bitte auf den Link in der E-Mail, die wir soeben an dich gesendet haben.<br><br>Bitte prüfe auch den SPAM-Ordner falls du diese E-Mail nicht erhalten hast.<br><br>Vielen Dank.</p>
         </div>
         <div class="error" data-status-template="error">
             <p>{message}</p>

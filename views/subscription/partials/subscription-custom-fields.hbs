@@ -2,29 +2,26 @@
 
     {{#if typeSubscriptionEmail}}
         <div class="form-group email">
-            <label for="email">{{#translate}}Email Address{{/translate}}</label>
             {{#if ../isManagePreferences}}
-                <div class="input-group">
-                    <input type="email" name="email" id="email" placeholder="" value="{{../email}}" readonly>
+                <div class="form-group first-name" class="et_pb_contact_field et_pb_contact_field_1 et_pb_contact_field_half et_pb_contact_field_last">
+                    <input style="width: 275px; font-size: 16px; background-color: #EEEEEE; padding: 12px;" type="email" name="email" id="email" placeholder="E-Mail" value="{{../email}}" readonly>
                     <div class="input-group-addon"><a href="/subscription/{{../lcid}}/manage-address/{{../cid}}">{{#translate}}want to change it?{{/translate}}</a></div>
                 </div>
             {{else}}
-                <input type="email" name="email" id="email" placeholder="" value="{{../email}}" required>
+                <input style="width: 275px; font-size: 16px; background-color: #EEEEEE; padding: 12px;" type="email" name="email" id="email" placeholder="E-Mail" value="{{../email}}" required>
             {{/if}}
         </div>
     {{/if}}
 
     {{#if typeFirstName}}
-        <div class="form-group first-name">
-            <label for="first-name">{{#translate}}First Name{{/translate}}</label>
-            <input type="text" name="first-name" id="first-name" placeholder="" value="{{../firstName}}">
+        <div>
+            <p>&nbsp;</p><input style="width: 275px; font-size: 16px; background-color: #EEEEEE; padding: 12px;" type="text" name="first-name" id="first-name" placeholder="Vorname" value="{{../firstName}}">
         </div>
     {{/if}}
 
     {{#if typeLastName}}
         <div class="form-group last-name">
-            <label for="last-name">{{#translate}}Last Name{{/translate}}</label>
-            <input type="text" name="last-name" id="last-name" placeholder="" value="{{../lastName}}">
+            <p class="et_pb_contact_field et_pb_contact_field_1 et_pb_contact_field_half et_pb_contact_field_last"><input type="hidden" name="last-name" id="last-name" placeholder="" value="{{../lastName}}"></p>
         </div>
     {{/if}}
 
